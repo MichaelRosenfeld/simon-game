@@ -21,7 +21,9 @@ var userChosenColor = $(this).attr("id");
 userClickedPattern.push(userChosenColor);
 });
 
-console.log(userClickedPattern);
+function playSound(name) {
+
+}
 
 
 
