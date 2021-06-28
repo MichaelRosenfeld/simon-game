@@ -24,11 +24,28 @@ userClickedPattern.push(userChosenColor);
 });
 
 function playSound(name) {
-  $("#" + userChosenColor).fadeOut(200).fadeIn(200).ready(function() {
-    var audio = new Audio("sounds/" + userChosenColor + ".mp3");
+  $("#" + name).fadeOut(200).fadeIn(200).ready(function() {
+    var audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
   });
 }
+
+// Animation for User Clicks
+
+function animatePress(currentColor) {
+  setTimeout(function() {
+    $("." + currentColor).addClass("pressed").removeClass("pressed");
+},100);
+}
+
+// Game Start
+
+$(document).keypress(function() {
+  nextSequence();
+});
+
+
+
 
 
 
