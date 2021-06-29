@@ -3,19 +3,42 @@ body {
   background-color: #011F3F;
 }
 
+
+
+
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin-top: 50px;
   color: #FEF2BF;
 }
 
 #losing-message {
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
-  margin:  0,auto;
+  margin-top: 50px;
   color: #FEF2BF;
 }
+
+.start-button {
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 30px;
+  display: inline-block;
+  height: 50px;
+  width: 150px;
+  border: 5px solid black;
+  border-radius: 20%;
+  background-color: grey;
+  padding: 5px 5px;
+}
+
+.start-button-pressed {
+  box-shadow: 0 0 20px white;
+  background-color: green;
+}
+
+
 
 .container {
   display: block;

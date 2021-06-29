@@ -15,7 +15,12 @@ var lostMessageArray = ["No one knows why Babou turned gay.",
 var randomMessage = lostMessageArray[randomArrayNumber];
 
 
-$(document).keypress(function() {
+$("button").click(function() {
+  $("button").addClass("start-button-pressed");
+  setTimeout(function() {
+    $("button").removeClass("start-button-pressed");
+  },100);
+  $("button").hide();
   if(!started) {
     $("#level-title").text("Level " + level);
     $("#losing-message").text("");
@@ -47,7 +52,7 @@ function checkAnswer(currentLevel) {
     playSound("wrong");
 
     $("body").addClass("game-over")
-    $("#level-title").text("Get fucked. Restart with any key.");
+    $("#level-title").text("Get fucked. Restart?");
 
     generateRandomMessage();
 
@@ -90,7 +95,7 @@ function startOver(){
   level = 0;
   gamePattern = []
   started = false;
-
+  $("button").show();
 }
 
 function generateRandomMessage(){
