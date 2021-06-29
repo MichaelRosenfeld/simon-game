@@ -19,8 +19,10 @@ $("button").click(function() {
   $("button").addClass("start-button-pressed");
   setTimeout(function() {
     $("button").removeClass("start-button-pressed");
-  },100);
+  });
+  setTimeout(function() {
   $("button").hide();
+},100);
   if(!started) {
     $("#level-title").text("Level " + level);
     $("#losing-message").text("");
@@ -50,9 +52,8 @@ function checkAnswer(currentLevel) {
       }
   } else {
     playSound("wrong");
-
     $("body").addClass("game-over")
-    $("#level-title").text("Get fucked. Restart?");
+    $("#level-title").text("Get fucked.");
 
     generateRandomMessage();
 
