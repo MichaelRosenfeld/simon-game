@@ -8,8 +8,8 @@ var level = 0;
 
 var randomArrayNumber = Math.floor(Math.random() * 10);
 var lostMessageArray = ["No one knows why Babou turned gay.",
- "Babou seems gay. I am worried about him.","Speck is a useful way of thinking.",
-"Void.", "I like my desk.", "Bro you fucked up, holy fk.", "Ziemlich speckig das Ganze.",
+ "Babou seems gay. I am worried about him.","Babou makes awesome Gay Marines.",
+"Void.", "I like my desk.", "Babou has amazing calves though.", "Anybody has ever seen Babou cook a Steak? Sexy af.",
  "Hmm.", "Yep.", "Sometimes I imagine Babou being in the shower."];
 
 var randomMessage = lostMessageArray[randomArrayNumber];
