@@ -6,10 +6,19 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+var randomArrayNumber = Math.floor(Math.random() * 10);
+var lostMessageArray = ["No one knows why Babou turned gay.",
+ "Babou seems gay. I am worried about him.","Speck is a useful way of thinking.",
+"Void.", "I like my desk.", "Bro you fucked up, holy fk.", "Ziemlich speckig das Ganze.",
+ "Hmm.", "Yep.", "Sometimes I imagine Babou being in the shower."];
+
+var randomMessage = lostMessageArray[randomArrayNumber];
+
 
 $(document).keypress(function() {
   if(!started) {
     $("#level-title").text("Level " + level);
+    $("#losing-message").text("");
     nextSequence();
     started = true;
 }
@@ -36,8 +45,11 @@ function checkAnswer(currentLevel) {
       }
   } else {
     playSound("wrong");
+
     $("body").addClass("game-over")
     $("#level-title").text("Get fucked. Restart with any key.");
+
+    generateRandomMessage();
 
     setTimeout(function() {
     $("body").removeClass("game-over")
@@ -78,4 +90,16 @@ function startOver(){
   level = 0;
   gamePattern = []
   started = false;
+
+}
+
+function generateRandomMessage(){
+  var randomArrayNumber = Math.floor(Math.random() * 10);
+  var lostMessageArray = ["No one knows why Babou turned gay.",
+   "Babou seems gay. I am worried about him.","Speck is a useful way of thinking.",
+  "Void.", "I like my desk.", "Bro you fucked up, holy fk.", "Ziemlich speckig das Ganze.",
+   "Hmm.", "Yep.", "Sometimes I imagine Babou being in the shower."];
+
+  var randomMessage = lostMessageArray[randomArrayNumber];
+  $("#losing-message").text(randomMessage);
 }
